@@ -19,6 +19,8 @@ public class MyCommandExecutor implements CommandExecutor{
         if(command.getName().equals("gpr")){
             if(commandSender.hasPermission("grouppvp.reload")){
                 p.reloadConfig();
+            commandSender.sendMessage(p.getCfg().getReloadMsg());
+                return true;
             }
 
         }

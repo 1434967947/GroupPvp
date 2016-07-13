@@ -1,5 +1,6 @@
 name: GroupPvp
 version: 0.01
+depend: Vault
 main: priv.minecraft.bukkit.plugin.groupPvp.GroupPvp
 commands:
   gpr:

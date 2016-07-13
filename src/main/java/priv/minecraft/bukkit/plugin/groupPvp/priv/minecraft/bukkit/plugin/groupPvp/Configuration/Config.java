@@ -23,6 +23,7 @@ public class Config{
         return ChatColor.translateAlternateColorCodes('&',string_to_translate);
 
     }
+    public String getReloadMsg(){return  color((c.getString("PluginReload")));}
     public String getNoPermMsg(){return  color((c.getString("NotEnoughPermission")));}
     public String getAttackMsg(){
        return  color(c.getString("messageAttack"));
