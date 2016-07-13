@@ -1,5 +1,5 @@
 name: GroupPvp
-version: 0.01
+version: 0.02
 main: priv.minecraft.bukkit.plugin.groupPvp.GroupPvp
 commands:
   gpr:
