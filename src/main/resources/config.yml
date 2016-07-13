@@ -1,5 +1,6 @@
 messageAttack: ”&c您不能攻击同阵营的人“
 messageDeath: “&c&l你杀死了同阵营的人，丢失了%m个游戏币"
+NotEnoughPermission: "&c你没有足够的权限"
 Group: true
 Permission:
    - "Group1"

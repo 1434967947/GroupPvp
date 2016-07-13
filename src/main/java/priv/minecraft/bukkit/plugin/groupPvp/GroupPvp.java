@@ -3,9 +3,12 @@ package priv.minecraft.bukkit.plugin.groupPvp;
 
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import priv.minecraft.bukkit.plugin.groupPvp.priv.minecraft.bukkit.plugin.groupPvp.Commands.MyCommandExecutor;
 import priv.minecraft.bukkit.plugin.groupPvp.priv.minecraft.bukkit.plugin.groupPvp.Configuration.Config;
+import priv.minecraft.bukkit.plugin.groupPvp.priv.minecraft.bukkit.plugin.groupPvp.Listeners.PlayerAttackListener;
 
 import java.util.HashMap;
 
@@ -44,6 +47,8 @@ saveDefaultConfig();
         setupPermissions();
         cfg=new Config(this);
 
+        Bukkit.getPluginManager().registerEvents(new PlayerAttackListener(), this);
+        Bukkit.getPluginCommand("gpr").setExecutor(new MyCommandExecutor(this));
     }
     public static Plugin getInstance(){
 
