@@ -1,0 +1,3 @@
+name: GroupPvp
+version: 0.01
+main: priv.minecraft.bukkit.plugin.groupPvp.GroupPvp
