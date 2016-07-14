@@ -1,0 +1,9 @@
+name: GroupPvp
+version: 0.02
+main: priv.minecraft.bukkit.plugin.groupPvp.GroupPvp
+commands:
+  gpr:
+     description: 重载插件
+     usage: /<command>
+     permission: <plugin name>.reload
+     permission-message: 你没有 <permission> 的权限来执行
