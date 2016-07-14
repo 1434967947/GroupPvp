@@ -10,6 +10,9 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import java.io.*;
+
+import org.bukkit.plugin.Plugin;
+
 import java.util.List;
 
 /**
@@ -17,18 +20,17 @@ import java.util.List;
  */
 public class Config{
 
-Configuration c;
+private Configuration c;
     public Config(Plugin plugin) {
 
         try {
-            c = YamlConfiguration.loadConfiguration(new InputStreamReader(new DataInputStream(new BufferedInputStream(new FileInputStream(new File(plugin.getDataFolder(),"config.yml")))),"UTF-8"));
+            c = YamlConfiguration.loadConfiguration(new InputStreamReader(new DataInputStream(new BufferedInputStream(new FileInputStream(new File(plugin.getDataFolder(), "config.yml")))), "UTF-8"));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             plugin.saveDefaultConfig();
 
         }
-
     }
     public String color(String string_to_translate){
         return ChatColor.translateAlternateColorCodes('&',string_to_translate);
